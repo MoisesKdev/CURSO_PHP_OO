@@ -2,9 +2,9 @@
 
 class conta
 {
-   public string $cpfTitular;
-   public string $nomeTitular;
-   public float $saldo = 0;
+   private string $cpfTitular;
+   private string $nomeTitular;
+   private float $saldo = 0;
 
     public function sacar(float $valorASacar)
     {
@@ -28,7 +28,7 @@ class conta
         
     }
 
-    public function transferir(float $valorATransferir, Conta $contaDestino): void
+    public function transfere(float $valorATransferir, Conta $contaDestino): void
     {
         if ($valorATransferir > $this->saldo){
             echo "Saldo Indisponível";
@@ -38,6 +38,31 @@ class conta
         $this->sacar($valorATransferir);
         $contaDestino->depositar($valorATransferir);
 
+    }
+
+    public function recuperaSaldo(): float
+    {
+        return $this->saldo;
+    }
+
+    public function defineCpfTitular(string $cpf) : void
+    {
+        $this->cpfTitular = $cpf;
+    }
+
+    public function recuperaCpfTitular(): string
+    {
+        return $this->cpfTitular;
+    }
+
+    public function defineNomeTitular(string $nome) : void
+    {
+        $this->nomeTitular = $nome;
+    }
+
+    public function recuperaNomeTitular(): string
+    {
+        return $this->nomeTitular;
     }
 
 }
