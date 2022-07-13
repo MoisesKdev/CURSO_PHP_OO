@@ -8,6 +8,9 @@ $primeiraConta->sacar(200);
 $primeiraConta->defineCpfTitular('123.456.789-10');
 $primeiraConta->defineNomeTitular('Moisés Kalebe');
 
-echo $primeiraConta->recuperaNomeTitular() . PHP_EOL;
-echo $primeiraConta->recuperaSaldo() . PHP_EOL;
-echo $primeiraConta->recuperaCpfTitular() . PHP_EOL;
+echo "Olá Sr(a). {$primeiraConta->recuperaNomeTitular()}" . PHP_EOL;
+echo "CPF de {$primeiraConta->recuperaCpfTitular()}" . PHP_EOL;
+echo "Saldo atual em conta é de {$primeiraConta->recuperaSaldo()} R$" . PHP_EOL;
+
+
+?>
