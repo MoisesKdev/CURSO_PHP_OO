@@ -8,7 +8,7 @@ $Pessoa1->nomePessoa = "Moisés";
 $Pessoa1->alturaPessoa = "1.80";
 $Pessoa1->pesoPessoa = "20";
 
-$Pessoa1->imcPessoa();
+echo $Pessoa1->calculoImc();
 
 echo PHP_EOL;
 
